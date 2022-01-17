@@ -1,0 +1,29 @@
+body {
+    background-color: #D3DEDC;
+    font-family: 'Roboto', sans-serif;
+}
+.date {
+    font-weight: bold;
+}
+
+img {
+    width: 50%;
+    border: double 5px black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+
+}
+
+.quote {
+    font-size: 15px;
+    font-family: 'Times New Roman';
+}
+
+footer {
+    margin-top: 50px;
+}
