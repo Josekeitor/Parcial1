@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-
+    <title>JS exercise</title>
 
 
 <script>
@@ -21,14 +21,20 @@ Funciones 1 -  Crea una funcion llamada "mayusculas" que:
 
 // CREA TU FUNCION MAYUSCULAS aqui:
 
+function mayusculas(nombres) {
 
+    for (let i = 0; i < nombres.length; i++) {
+        nombres[i] = nombres[i].toUpperCase()
+        console.log(nombres[i])
+    }
+}
 
 
 /*
-Funciones 2 -  Crea una funcion llamada "calculateDogAge" que: 
+Funciones 2 -  Crea una funcion llamada "calculateDogAge" que:
 
 - reciba como argumento un número representando la edad en años humanos.
-- realiza el cálculo de la edad en base a la conversión 1 año humano = 7 años perro.  
+- realiza el cálculo de la edad en base a la conversión 1 año humano = 7 años perro.
 - Deberá escribir en consola "Tu perro tiene NN años perro"
 - EJ:   calculateDogAge(2)  -> "Tu pero tiene 14 años perro"
 
@@ -36,6 +42,10 @@ Funciones 2 -  Crea una funcion llamada "calculateDogAge" que:
 
 // CREA TU FUNCION calculateDogAge aqui:
 
+function calculateDogAge(num) {
+    let edadPerro = num * 7;
+    console.log(`Tu perro tiene ${edadPerro} años perro`)
+}
 
 
 
@@ -44,8 +54,7 @@ Funciones 2 -  Crea una funcion llamada "calculateDogAge" que:
 
 
 
-
-/*  OBJETOS 
+/*  OBJETOS
 
 A) Define un objeto tipo "Perro" que reciba 3 parametros
 
@@ -56,17 +65,25 @@ A) Define un objeto tipo "Perro" que reciba 3 parametros
 
 B) Crea 3 objectos  con diferentes valores.
 
-C) Con un console.log escribe el nombre del primer objeto, el color del segundo, y la raza del tercero. Lo puedes hacer en una sola línea o en 3 lineas aparte. 
+C) Con un console.log escribe el nombre del primer objeto, el color del segundo, y la raza del tercero. Lo puedes hacer en una sola línea o en 3 lineas aparte.
 
 
 */
 
+function Perro (nombre, color, raza) {
+  this.nombre = nombre;
+  this.color = color;
+  this.raza = raza;
+}
 
+let labrador = new Perro("Lab", "Café", "Labrador");
+let golden = new Perro("El dorado", "Negro", "Golden Retriever")
+let pastor = new Perro("Kira", "Negro con amarillo", "Pastor Aleman")
 
 /***
- * 
+ *
  *        PRUEBA TUS FUNCIONES
- * 
+ *
  ***/
 
 
@@ -77,11 +94,12 @@ calculateDogAge(4);
 
 
 /***
- * 
+ *
  *        PRUEBA TUS OBJETOS AQUI
- * 
+ *
  ***/
 
+console.log(`${labrador.nombre} - ${golden.color} - ${pastor.raza}`)
 
 </script>
 
